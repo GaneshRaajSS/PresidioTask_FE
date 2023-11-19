@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router'
-// import {}} from '@fortawesome/angular-fontawesome'
 
 @Component({
   selector: 'app-root',
