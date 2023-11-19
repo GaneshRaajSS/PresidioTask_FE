@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+}
+section.auth-sidebar {
+  position: relative;
+  height: 572px;
+  display: flex;
+  flex-direction: row;
+}
+.auth-sidebar-content {
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+  width: 35%;
+}
+video.auth-sidebar-video {
+  width: 400px;
+  object-fit: fill;
+}
+a.auth-sidebar-logo {
+  position: absolute;
+}
+svg.fill-current {
+  margin: 37px;
+  color: white;
+}
+
+.right-side-content {
+  display: flex;
+  width: 65%;
+  flex-direction: column;
+  margin-top: 70px;
+  align-items: center;
+}
+
+.sign-div h2 {
+  font: bold 24px/29px "Mona Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  margin-right: 400px;
+}
+
+hr.divider.sign-in:after {
+  content: "or sign in with email";
+}
+hr.divider {
+  height: 1px;
+  margin-top: 53px;
+  padding: 0;
+  overflow: visible;
+  border: none;
+  text-align: center;
+  margin-right: 142px;
+}
+.google-auth {
+  height: 72px;
+  width: 312px;
+}
+button.google-btn {
+  display: flex;
+  height: 63px;
+  width: 452px;
+  border-radius: 50px;
+  border-width: thin;
+  margin-top: 33px;
+  margin-left: -146px;
+  background-color: white;
+  font-size: medium;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.google-btn svg {
+  width: 26px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-right: 160px;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input {
+  padding: 10px;
+  width: 402px;
+  height: 28px;
+  border-radius: 21px;
+  margin-bottom: 13px;
+}
+
+button.login-btn-auth {
+  display: flex;
+  height: 63px;
+  width: 452px;
+  border-radius: 50px;
+  border-width: thin;
+  margin-top: 10px;
+  margin-left: -146px;
+  background-color: black;
+  color: white;
+  font-size: medium;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.divider-singup {
+  height: 1px;
+  margin-top: 7px;
+  padding: 0;
+  overflow: visible;
+  border: none;
+  text-align: center;
+  margin-right: 142px;
+}
+.divider-singup u {
+  cursor: pointer;
+}
+

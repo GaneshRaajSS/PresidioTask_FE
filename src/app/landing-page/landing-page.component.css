@@ -1,0 +1,388 @@
+
+ul,li{
+    text-decoration: none;
+    list-style: none;
+    padding: 0px 10px ;
+}
+.home-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+}
+div .badge{
+    height: 40px;
+    width: 350px;
+    background: grey;
+    border-radius: 20px;
+    background-color: #ffabe7;
+}
+span{
+    display: flex;
+    height: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.hero_heading{
+    margin: 40px auto 24px;
+    font-weight: 400;
+    font-family: "Source Serif 4", Georgia, serif;
+    letter-spacing: -0.5px;
+    font-size: 77px;
+    max-width: 890px;
+    text-align: center;
+}
+.home-type-body{
+    text-align: center;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.btn-hiring{
+    display: flex;
+    justify-content: center;
+    
+}
+.btn1{
+    height: 56px;
+    width: 180px;
+    border-radius: 125px;
+    background: black;
+    color: white;
+    font-weight: 600;
+}
+.btn-hiring button{
+    cursor: pointer;
+}
+
+.Marquee{
+    height: 475px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    overflow: hidden;
+    margin-top: 35px;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 3));
+    }
+}
+
+.track {
+    display: flex;
+    width: calc(250px * 9); 
+    animation: scroll 20s linear infinite; 
+}
+
+.marquee-info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 342px;
+    width: 220px;
+    justify-content: flex-end;
+}
+
+.hero-info{
+    height: 496px;
+    width: 300px;
+    display: flex;
+    padding: 15px;
+}
+.card-class{
+    margin-bottom: 0;
+    
+}
+img{
+    width: 100%;
+    transition: transform 1s;
+    border-radius: 50px;
+}
+.item-tags{
+    display: flex;
+    flex-direction: row;
+    color: #ffff;
+    margin-top: 11px;
+    
+}
+.item-name,
+.item-title{
+    margin-left: 20px;
+    color: #ffff;
+}
+.tag-container{
+    height: 20px;
+}
+
+h2{
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.design-feed{
+    width: 90%;
+    margin: auto;
+}
+ol.design-grids {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between; 
+    padding: unset;
+    margin-top: 62px;
+}
+
+li.design-cards {
+    height: 350px; 
+    width: calc(32.33% - 10px); 
+    margin-bottom: 20px; 
+}
+
+.design-card-overlay {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    position: relative;
+    bottom: 65px;
+    height: 60px;
+    border-radius: 30px;
+    opacity: 1;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.design-cards:hover .design-card-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+ul.overlay-btn {
+    display: flex;
+    flex-direction: row;
+}
+.btn-overlay-div {
+    bottom: 65px;
+    height: 60px;
+}
+
+.profile-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -50px;
+    padding: 0 27px 0 27px;
+}
+.left-profile{
+    display: flex;
+    flex-direction: row;
+}
+.right-profile{
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-image img{
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+    ol.design-grids {
+        flex-direction: column;
+    }
+
+    li.design-cards {
+        height: auto; 
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .design-card-overlay {
+        bottom: 0; 
+    }
+
+    .btn-overlay-div {
+        height: auto; 
+    }
+}
+
+
+
+.btn-browse{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    margin-bottom: 150px;
+}
+.btn-browse-more{
+    border: 2px solid #000;
+    border-radius: 50px;
+    background: transparent;
+    width: 200px;
+    cursor: pointer;
+}
+
+.Jobs{
+    height: 700px;
+    background: #ffda79;
+    width: 1279px;
+    margin: 0 auto;
+    margin-left: -16px;
+}
+
+.head{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 100;
+    justify-content: center;
+    height: 260px;
+    align-items: center;
+    font-size: 60px;
+}
+.head-para{
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    text-align: -webkit-center;
+    margin: 0 auto;
+    font-size: 21px;
+    line-height: 36px;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.action-btn{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    justify-content: center;
+}
+.action-btn button{
+    border-radius: 25px;
+    height: 56px;
+    padding: 24px;
+    font-size: 14px;
+}
+
+.likes{
+    display: flex;
+    margin-right: 20px;
+    flex-direction: row;
+}
+.like-svg{
+    margin-right: 10px;
+}
+
+.views svg{
+    margin-right: 10px;
+    align-self: baseline;
+}
+.start-btn button{
+    background-color: #000;
+    color: #ffff;
+}
+.learn-btn-hiring {
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+.joinie-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.joinie-link1 {
+    font-size: 40px;
+}
+
+.footer-item-img{
+    width: 250px;
+    padding: 30px;
+}
+.footer-item-title {
+    margin-top: -20px;
+    margin-left: 128px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 3));
+    }
+}
+
+.card-class{
+    cursor: pointer;
+}
+
+.btn-bookmark svg,.btn-like svg,.likes svg{
+    cursor: pointer;
+}
+
+.footer-track {
+    display: flex;
+    width: calc(250px * 9); 
+    animation: scroll 20s linear infinite; 
+    overflow: hidden;
+}
+.footer-track:hover {
+    animation-play-state: paused;
+}
+
+.start-btn-link button,
+.learn-btn-hiring-link button{
+    cursor: pointer;
+}
+
+.footer{
+    overflow: hidden;
+}
+
+.design-feed a u{
+    cursor: pointer;
+}
+
+.cate1-info{
+    cursor: pointer;
+}
+
+input.search-btn-nav {
+    border-radius: 20px;
+    width: 200px;
+    margin-right: 20px;
+    height: 38px;
+  }
+  form input{
+    padding-left: 10px;
+    cursor: text;
+}
+ul.autocomplete-list {
+    background: white;
+    position: absolute;
+    width: 200px;
+    border-radius: 26px;
+}
+.height{
+    max-height: 300px;
+}
+search-btn-nav li{
+    margin-left: 40px;
+}
+.search-list{
+    padding: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,97 @@
+.logo-landingpage {
+  margin-right: 10px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 200;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+  color: #cfcfcfec;
+}
+span {
+  display: flex;
+  flex-direction: column;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100;
+  font-size: smaller;
+}
+.nav-main_Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+img {
+  width: 100px;
+  height: 34px;
+  margin-top: 17px;
+  margin-left: 30px;
+}
+.nav-main_list {
+  display: flex;
+}
+.nav-main_item {
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.nav-main_subitems {
+  list-style-type: none;
+  display: none;
+  margin-top: 10px;
+  padding: 15px;
+  position: absolute;
+  background-color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.nav-main_list li:nth-child(3):hover .nav-main_subitems {
+  display: block;
+}
+.nav-main_subitems_divider {
+  width: 16em;
+  height: 1px;
+  background-color: #e7e7e9;
+  margin-bottom: 15px;
+}
+
+.search-div {
+  display: flex;
+  height: 38px;
+  width: 695px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+input.search-btn-nav {
+  border-radius: 20px;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.login-btn{
+    padding: 10px;
+    margin-right: 20px;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+}
+.signup-btn{
+    width: 100px;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    font-weight: 600;
+}
+
+
+.search-div button{
+    cursor: pointer;
+}

@@ -1,0 +1,179 @@
+
+.category{
+    display: flex;
+    height: 16px;
+    width: 100%;
+    position: absolute;
+  }
+  .content-category {
+    margin-top: 89px;
+    margin-left: 81px;
+}
+.filter-category {
+    margin-top: 100px;
+    margin-left: 64px;
+}
+.filter1 {
+    display: flex;
+    width: 509px;
+}
+  .filter1 ul{
+    display: flex;
+    flex-direction: row;
+    width: 583px;
+    justify-content: space-between;
+  }
+  .filter-tag {
+    border: solid black 1px;
+    border-radius: 17px;
+    height: 40px;
+    width: 98px;
+    background: white;
+}
+  .tag-category {
+    margin-top: 88px;
+    margin-left: 69px;
+}
+.search {
+    margin-top: -41px;
+    margin-left: 163px;
+}
+
+select {
+    width: 137px;
+    height: 40px;
+    border-radius: 7px;
+}
+
+.fil-div{
+    display: flex;
+    height: 30px;
+    width: 70px;
+    border: solid black 1px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+
+ul,li{
+    text-decoration: none;
+    list-style: none;
+    padding: 0px 10px ;
+}
+
+.card-class{
+    margin-bottom: 0;
+    
+}
+img{
+    width: 100%;
+    transition: transform 1s;
+    border-radius: 50px;
+}
+
+
+
+.design-feed{
+    width: 90%;
+    margin: auto;
+}
+ol.design-grids {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between; 
+    padding: unset;
+    margin-top: 184px;
+}
+
+li.design-cards {
+    height: 350px; 
+    width: calc(32.33% - 10px); 
+    margin-bottom: 20px; 
+}
+
+.design-card-overlay {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    position: relative;
+    bottom: 65px;
+    height: 60px;
+    border-radius: 30px;
+    opacity: 1;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.design-cards:hover .design-card-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+ul.overlay-btn {
+    display: flex;
+    flex-direction: row;
+}
+.btn-overlay-div {
+    bottom: 65px;
+    height: 60px;
+}
+
+.profile-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -50px;
+    padding: 0 27px 0 27px;
+}
+.left-profile{
+    display: flex;
+    flex-direction: row;
+}
+.right-profile{
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-image img{
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+    ol.design-grids {
+        flex-direction: column;
+    }
+
+    li.design-cards {
+        height: auto; 
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .design-card-overlay {
+        bottom: 0; 
+    }
+
+    .btn-overlay-div {
+        height: auto; 
+    }
+}
+
+.likes{
+    display: flex;
+    margin-right: 20px;
+    flex-direction: row;
+}
+.like-svg{
+    margin-right: 10px;
+}
+
+.views svg{
+    margin-right: 10px;
+    align-self: baseline;
+}

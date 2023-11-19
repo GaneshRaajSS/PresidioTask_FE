@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+}
+section.auth-sidebar {
+  position: relative;
+  height: 572px;
+  display: flex;
+  flex-direction: row;
+}
+.auth-sidebar-content {
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+  width: 40%;
+}
+video.auth-sidebar-video {
+  width: 400px;
+  object-fit: fill;
+}
+a.auth-sidebar-logo {
+  position: absolute;
+}
+svg.fill-current {
+  margin: 37px;
+  color: white;
+}
+
+.right-side-content {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+}
+
+.sign-div h2 {
+  font: bold 24px/29px "Mona Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  margin-right: 400px;
+}
+
+hr.divider.sign-in:after {
+  content: "or";
+}
+hr.divider {
+  height: 1px;
+  margin-top: 53px;
+  padding: 0;
+  overflow: visible;
+  border: none;
+  text-align: center;
+  margin-right: 142px;
+}
+.google-auth {
+  height: 72px;
+  width: 312px;
+}
+button.google-btn {
+  display: flex;
+  height: 63px;
+  width: 452px;
+  border-radius: 50px;
+  border-width: thin;
+  margin-top: 33px;
+  margin-left: -146px;
+  background-color: black;
+  font-size: medium;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+}
+.google-btn svg {
+  width: 26px;
+}
+
+button.signup-btn-auth {
+  display: flex;
+  height: 63px;
+  width: 452px;
+  border-radius: 50px;
+  border-width: thin;
+  margin-top: 50px;
+  margin-left: -146px;
+  background-color: white;
+  color: black;
+  font-size: medium;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.acc-singup-btn {
+  height: 1px;
+  margin-top: 20px;
+  padding: 0;
+  overflow: visible;
+  border: none;
+  text-align: center;
+  margin-right: 142px;
+  font-weight: 100;
+  font-size: small;
+}
+.acc-singup-btn u {
+  cursor: pointer;
+}
+
+.t-c {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 65px;
+  width: 100%;
+  margin-right: 135px;
+  font-weight: 100;
+  font-size: small;
+}
+.t-c u{
+    cursor: pointer;
+}

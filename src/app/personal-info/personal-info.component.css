@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+}
+section.auth-sidebar {
+  position: relative;
+  height: 572px;
+  display: flex;
+  flex-direction: row;
+}
+.auth-sidebar-content {
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+  width: 40%;
+}
+video.auth-sidebar-video {
+  width: 400px;
+  object-fit: cover;
+}
+a.auth-sidebar-logo {
+  position: absolute;
+}
+svg.fill-current {
+  margin: 37px;
+  color: white;
+}
+
+.right-side-content {
+  display: flex;
+  width: 60%;
+  margin-top: 100px;
+}
+
+
+.icon-back{
+    width: 30px;
+    height: 30px;
+    border-width: thin;
+    border: solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-right: 160px;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+.name-container input {
+  padding: 10px;
+  width: 200px;
+  height: 28px;
+  border-radius: 21px;
+  margin-bottom: 13px;
+}
+.name,.uname {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.Email,.password{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+input {
+    padding: 10px;
+    width: 480px;
+    height: 28px;
+    border-radius: 21px;
+    margin-bottom: 13px;
+  }
+.name-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.cb-tc {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.cb-tc input{
+    padding: 0;
+    width: 68px;
+    height: 21px;
+}
+ .acc-btn-auth{
+    display: flex;
+    height: 53px;
+    width: 452px;
+    border-radius: 50px;
+    border-width: thin;
+    margin-top: 9px;
+    margin-left: 30px;
+    background-color: black;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.acc-singin-btn {
+    height: 1px;
+    margin-top: 10px;
+    padding: 0;
+    overflow: visible;
+    border: none;
+    text-align: center;
+    margin-right: 8px;
+    font-weight: 100;
+    font-size: medium;
+  }
+  .acc-singin-btn u {
+    cursor: pointer;
+  }
+  
+  .captcha-text{
+    font-size: smaller;
+    color: #9e9ea7;
+    margin-top: 35px;
+  }
+  .captcha-text b{
+    color: rgb(36, 35, 35);
+    font-weight: 100;
+  }

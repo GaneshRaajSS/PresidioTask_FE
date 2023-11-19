@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="nav-main">
+        <div class="nav-main_Wrapper">
+            <div class="nav-search">
+
+                <a class="logo-landingpage" href="/"><img src="assets/img/logo.png" alt="logo"></a>
+            </div>
+            <ul class="nav-main_list">
+                <li class="nav-main_item">
+                    <a href="">Find Talent</a>
+                </li>
+                <li class="nav-main_item">
+                    <a a (click)="goToPage('designs')">Inspiration</a>
+                </li>
+                <li class="nav-main_item">
+                    <a href="">Learn design</a>
+                    <ul class="nav-main_subitems">
+                        <li class="nav-main_subitems_item1">
+                            <a>UX Diplomo
+                                <span class="nav-v2-sub__subtitle">in partnership with UX Design Institute</span>
+                            </a>
+                        </li>
+                        <li class="nav-main_subitems_divider"></li>
+                        <li class="nav-main_subitems_item">
+                            <a>Design Optimaization & Logo Design
+                                <span class="nav-v2-sub__subtitle">With Aaron Draplin</span>
+                            </a>
+                        </li>
+                        <li class="nav-main_subitems_item">
+                            <a>Learn Graphic Design
+                                <span class="nav-v2-sub__subtitle">With David Carson</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-main_item">
+                    <a href="">Jobs</a>
+                </li>
+                <li class="nav-main_item">
+                    <a href="">Go Pro</a>
+                </li>
+            </ul>
+            <div class="search-div">
+                <a (click)="goToPage('login')"><button class="login-btn">Log in</button></a>
+                <button class="signup-btn" (click)="goToPage('signup')">Sign up</button>
+            </div>
+
+
+        </div>
+    </nav>
+
+</body>
+
+</html>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router'
+// import {}} from '@fortawesome/angular-fontawesome'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontendClone';
-}
+  onItemSelected(item: string) {
+    console.log('Item selected:', item);
+  }
+  }
+

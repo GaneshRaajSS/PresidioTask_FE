@@ -1,0 +1,183 @@
+<link rel="stylesheet" href="landing-page.component.css">
+<!DOCTYPE html>
+<html lang="en">
+<app-nav-bar></app-nav-bar>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribble</title>
+</head>
+
+<body>
+    <div class="home-Container">
+        <div class="badge"><span>Over 3 million ready-to-work creatives!</span></div>
+        <h1 class="hero_heading">Work with the world’s top creative talent.</h1>
+        <div class="home-type-body">Connect with millions of top-rated designers &amp; agencies around the world.</div>
+    </div>
+    <div class="btn-hiring"><button class="btn1">Start hiring today</button></div>
+    <div class="Marquee">
+        <div class="track">
+            <div *ngFor="let heroInfo of heroInfos" class="hero-info">
+                <div class="marquee-info">
+                    <div class="item-name">{{heroInfo.itemName}}</div>
+                    <div class="item-title">{{heroInfo.itemTitle}}</div>
+                    <ul class="item-tags">
+                        <div class="tag-container" *ngFor="let tag of heroInfo.itemTags">
+                            <li class="item-tag">{{tag}}</li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="item-img"><img [src]="heroInfo.imgUrl" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="design-feed">
+        <h2>Explore inspiring designs</h2>
+
+        <div class="autocomplete-container">
+            <form [formGroup]="searchForm">
+                <input class="search-btn-nav" type="text" placeholder="Search" formControlName="searchText"
+                    (input)="onSearch()">
+                <ul *ngIf="filteredItems.length > 0 " class="autocomplete-list"
+                    [ngClass]="{'height': filteredItems.length}">
+                    <li class="search-list" *ngFor="let item of filteredItems" (click)="onSelect(item)">{{ item }}</li>
+                </ul>
+            </form>
+        </div>
+
+        <ol class="design-grids">
+            <li *ngFor="let card of filteredDesignCards" class="design-cards">
+                <div class="card-class">
+                    <a>
+                        <img class="design-card-img" [src]="card.imageUrl" alt="card1">
+                    </a>
+                </div>
+                <div class="design-card-overlay">
+                    <div class="overlay-content">
+                        <div class="card-title">{{card.title}}</div>
+                    </div>
+                    <div class="btn-overlay-div">
+                        <ul class="overlay-btn">
+                            <li class="btn-bookmark" (click)="toggle_bookmark(card)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none" role="img" class="icon " *ngIf="!card.bookMark">
+                                    <path
+                                        d="M3.33337 5.2C3.33337 4.0799 3.33337 3.51984 3.55136 3.09202C3.74311 2.71569 4.04907 2.40973 4.42539 2.21799C4.85322 2 5.41327 2 6.53337 2H9.46671C10.5868 2 11.1469 2 11.5747 2.21799C11.951 2.40973 12.257 2.71569 12.4487 3.09202C12.6667 3.51984 12.6667 4.0799 12.6667 5.2V14L8.00004 11.3333L3.33337 14V5.2Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="#ffff" role="img" class="icon " *ngIf="card.bookMark">
+                                    <path
+                                        d="M3.33337 5.2C3.33337 4.0799 3.33337 3.51984 3.55136 3.09202C3.74311 2.71569 4.04907 2.40973 4.42539 2.21799C4.85322 2 5.41327 2 6.53337 2H9.46671C10.5868 2 11.1469 2 11.5747 2.21799C11.951 2.40973 12.257 2.71569 12.4487 3.09202C12.6667 3.51984 12.6667 4.0799 12.6667 5.2V14L8.00004 11.3333L3.33337 14V5.2Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </li>
+                            <li class="btn-like" (click)="toggleLike(card)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none" role="img" class="icon " *ngIf="!card.like">
+                                    <path
+                                        d="M10.7408 2C13.0889 2 14.6667 4.235 14.6667 6.32C14.6667 10.5425 8.11856 14 8.00004 14C7.88152 14 1.33337 10.5425 1.33337 6.32C1.33337 4.235 2.91115 2 5.2593 2C6.60745 2 7.48893 2.6825 8.00004 3.2825C8.51115 2.6825 9.39263 2 10.7408 2Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"
+                                    *ngIf="card.like"
+                                    fill="#EA64D9"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="left-profile">
+                        <div class="profile-image"><img [src]="card.profilepic" alt=""></div>
+                        <div class="profile-name">{{card.name}}</div>
+                    </div>
+                    <div class="right-profile">
+                        <div class="likes">
+                            <div class="like-svg" (click)="toggleLike(card)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                    fill="none" role="img" class="icon " *ngIf="!card.like">
+                                    <path
+                                        d="M10.7408 2C13.0889 2 14.6667 4.235 14.6667 6.32C14.6667 10.5425 8.11856 14 8.00004 14C7.88152 14 1.33337 10.5425 1.33337 6.32C1.33337 4.235 2.91115 2 5.2593 2C6.60745 2 7.48893 2.6825 8.00004 3.2825C8.51115 2.6825 9.39263 2 10.7408 2Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"
+                                    *ngIf="card.like"
+                                    fill="#EA64D9"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                                </svg>
+                            </div>
+                            <div class="like-Count">
+                                {{card.likeCount}}
+                            </div>
+
+                        </div>
+                        <div class="views">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none" role="img" class="icon fill-current shot-tools-icon">
+                                <path
+                                    d="M8 3C4.36992 3 1.98789 6.21774 1.18763 7.49059C1.09079 7.64462 1.04237 7.72163 1.01527 7.84042C0.99491 7.92964 0.99491 8.07036 1.01527 8.15958C1.04237 8.27837 1.09079 8.35539 1.18763 8.50941C1.98789 9.78226 4.36992 13 8 13C11.6301 13 14.0121 9.78226 14.8124 8.50941L14.8124 8.50939C14.9092 8.35538 14.9576 8.27837 14.9847 8.15958C15.0051 8.07036 15.0051 7.92964 14.9847 7.84042C14.9576 7.72163 14.9092 7.64462 14.8124 7.4906L14.8124 7.49059C14.0121 6.21774 11.6301 3 8 3Z"
+                                    fill="currentColor">
+                                </path>
+                                <path
+                                    d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"
+                                    fill="white">
+                                </path>
+                            </svg>{{card.views}}
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ol>
+        <div class="btn-browse">
+            <button class="btn-browse-more" a (click)="goToPage('designs')">
+                Browse more insipiration
+            </button>
+        </div>
+    </div>
+    <div class="Jobs">
+        <h2 class="head">
+            Find your next <br>designer today
+        </h2>
+        <div class="head-para"> The world’s leading brands use Dribbble to hire creative talent. Browse millions of
+            top-rated portfolios to find your perfect creative match.
+        </div>
+        <div class="action-btn">
+            <div class="start-btn"><a class="start-btn-link"><button (click)="goToPage('signup')">Get started
+                        now</button></a></div>
+            <div class="learn-btn-hiring"><a class="learn-btn-hiring-link"><button>Learn about hiring</button></a></div>
+        </div>
+        <div class="design-feed">
+            <h2>Are you a designer? <a (click)="goToPage('signup')"><u>Join Dribbble</u></a></h2>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-Marquee">
+            <div class="footer-track">
+                <div *ngFor="let cate of categories" class="Category-Info">
+                    <div class="footer-marquee-info">
+                        <div class="cate1-info">
+                            <div class="footer-item-img"><img [src]="cate.imgUrl" alt=""></div>
+                            <div class="footer-item-title">{{cate.itemTitle}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</body>
+
+
+</html>
